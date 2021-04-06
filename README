@@ -1,0 +1,9 @@
+I made some test files & a script.
+
+If you want to build tests : sh build.sh
+
+If you want to compile & run manually : cmake
+
+to terminate on lookup : "KILLME"
+
+Didn't have time to integrate automated testing cin from file.

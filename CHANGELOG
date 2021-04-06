@@ -1,0 +1,36 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+### Changed
+- Project version upgraded to C++14 from C++11
+- std::gets(x) replaced with std::fgets(x,size of x,y) due prior being deprecated
+- C type string functionality with std::string
+- Changed Word to be Class type(rather than public forced Struct)
+- Thread sync mechanism
+
+### Removed
+- All references to C libraries & functions
+
+### Added
+- CMake structure to have a reliable build system
+- Added <mutex> and <iostream> to headers
+- A better & modern C++ approved way to handle concurrency
+- Starter script
+- Test examples
+- Condition Variable + std:: mutex to not halt on while loops as well as handling notification pattern
+- Crticial section control
+- s_word act as shared mem along with static data(vect)
+- Lambda function + std::find_if to use my overloaded == operator , std::find only compares pointers
+- Two threads (1 producer + 1 consumer ) + one main thread is better
+
+## Shortcomings
+ * If user enters "end" as first word still completes first thread job , but second thread handles it. There could be
+a way to even terminate first thread before but complicates / make ugly code this is ok.
+ * Tried to use const as much as possible , but too much useless dynamic allocation is well useless so I removed some
+ * there is a little bug in static_method i define but didnt use for not duplicating std::find_if lambda, minor thing
+ * Didn't handle if no "end" appears.
+ * to terminate enter  "KILLME"
+
+
+
